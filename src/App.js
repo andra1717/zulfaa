@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Heart, Home, Book, LogOut } from "lucide-react";
 
-// STYLES (Tidak ada perubahan di sini)
+// STYLES
 const styles = {
-  // ... semua style Anda tetap sama ...
   // Login Styles
   loginContainer: {
     minHeight: "100vh",
@@ -312,7 +311,6 @@ const LoginPage = ({
   setPassword,
   handleLogin,
 }) => (
-  // ... Komponen LoginPage tidak berubah
   <div style={styles.loginContainer}>
     <div style={styles.loginBox}>
       <div style={styles.loginHeader}>
@@ -342,10 +340,7 @@ const LoginPage = ({
           />
         </div>
         {loginError && <div style={styles.error}>{loginError}</div>}
-        <button
-          onClick={handleLogin}
-          style={styles.button}
-        >
+        <button onClick={handleLogin} style={styles.button}>
           Masuk
         </button>
       </div>
@@ -361,7 +356,6 @@ const MainPage = ({
   showLoveAnimation,
   showThanksMessage,
 }) => (
-  // ... Komponen MainPage tidak berubah
   <div style={styles.mainContainer}>
     <nav style={styles.navbar}>
       <div style={styles.navContainer}>
@@ -406,39 +400,39 @@ const MainPage = ({
           <div style={styles.heroSection}>
             <h1 style={styles.heroTitle}>Happy Anniversary Babe!💕</h1>
             <p style={styles.heroText}>
-             Hari ini tepat tiga tahun kita bareng, and honestly, I still can’t
-             believe how fast time flies. Tiga tahun mungkin terlihat singkat
-             kalau cuma dihitung angka, tapi buat aku, setiap momen yang kita
-             lewatin bareng itu priceless. Dari hal-hal kecil yang sederhana
-             sampai perjalanan panjang yang bikin kita banyak belajar semua itu
-             jadi bagian indah dari cerita kita. Thank you for staying, for
-             choosing me every single day, bahkan di saat aku nggak selalu jadi
-             orang yang gampang dimengerti. Kamu udah jadi tempat pulang, jadi
-             partner ngobrol, jadi sahabat, sekaligus jadi cinta yang nggak
-             pernah habis aku syukuri. Kadang aku mikir, how lucky I am to have
-             you in my life. Aku tahu kita masih punya banyak halangan di
-             depan, tapi aku percaya selama kita saling genggam tangan,
-             everything will be okay. Love is not about being perfect, but
-             about growing together and I’m so glad it’s with you. Happy 3rd
-             Anniversary, sayang. Cheers to more laughs, more adventures, and
-             more years together. I love you, always and forever.
+              Hari ini tepat tiga tahun kita bareng, and honestly, I still can’t
+              believe how fast time flies. Tiga tahun mungkin terlihat singkat
+              kalau cuma dihitung angka, tapi buat aku, setiap momen yang kita
+              lewatin bareng itu priceless. Dari hal-hal kecil yang sederhana
+              sampai perjalanan panjang yang bikin kita banyak belajar semua itu
+              jadi bagian indah dari cerita kita. Thank you for staying, for
+              choosing me every single day, bahkan di saat aku nggak selalu jadi
+              orang yang gampang dimengerti. Kamu udah jadi tempat pulang, jadi
+              partner ngobrol, jadi sahabat, sekaligus jadi cinta yang nggak
+              pernah habis aku syukuri. Kadang aku mikir, how lucky I am to have
+              you in my life. Aku tahu kita masih punya banyak halangan di
+              depan, tapi aku percaya selama kita saling genggam tangan,
+              everything will be okay. Love is not about being perfect, but
+              about growing together and I’m so glad it’s with you. Happy 3rd
+              Anniversary, sayang. Cheers to more laughs, more adventures, and
+              more years together. I love you, always and forever.
             </p>
           </div>
           <div style={styles.photoGrid}>
             <div style={styles.photoColumn}>
               <div style={styles.photoBox} className="photo-box">
-                <img src="/img/love.jpg" alt="Kenangan 1" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/images/mine (1).jpg'} alt="Kenangan 1" style={styles.photoImage} />
               </div>
               <div style={styles.photoBox} className="photo-box">
-                <img src="/img/love2.webp" alt="Kenangan 2" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/images/mine (2).jpg'} alt="Kenangan 2" style={styles.photoImage} />
               </div>
             </div>
             <div style={styles.photoColumn}>
               <div style={styles.photoBox} className="photo-box">
-                <img src="/img/love3.webp" alt="Kenangan 3" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/images/mine (3).jpg'} alt="Kenangan 3" style={styles.photoImage} />
               </div>
               <div style={styles.photoBox} className="photo-box">
-                <img src="/img/love4.jpg" alt="Kenangan 4" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/images/mine (4).jpg'} alt="Kenangan 4" style={styles.photoImage} />
               </div>
             </div>
           </div>
@@ -452,8 +446,8 @@ const MainPage = ({
             {[1, 2, 3, 4, 5, 6].map((num) => (
               <div key={num} style={styles.docPhotoBox} className="photo-box">
                 <img
-                  src={`/images/mine${num}.jpg`}
-                  alt={`Dokumentasi ${num}`}
+                  src={`${process.env.PUBLIC_URL}/images/mine (${num}).jpg`}
+                  alt={`mine ${num}`}
                   style={styles.photoImage}
                 />
               </div>
@@ -499,8 +493,7 @@ const MainPage = ({
                   Semoga Kita Bahagia Selalu! 💕
                 </h3>
                 <p style={styles.thanksText}>
-                  Terima kasih sayangku sudah bertahan sejauh ini sama mas. 
-                  i love you manis💕💕💕💕! ✨
+                  Terima kasih sayangku sudah bertahan sejauh ini sama mas. i love you manis💕💕💕💕! ✨ 
                 </p>
               </div>
             </div>
@@ -549,9 +542,6 @@ const AnniversaryApp = () => {
     }, 2000);
   };
 
-  // ==========================================================
-  // PERBAIKAN: Mengembalikan @keyframes yang hilang
-  // ==========================================================
   const GlobalStyles = () => (
     <style>{`
       @keyframes pulse {
