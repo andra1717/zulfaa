@@ -428,18 +428,27 @@ const MainPage = ({
           <div style={styles.photoGrid}>
             <div style={styles.photoColumn}>
               <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/images/mine1.jpg'} alt="Kenangan 1" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/img/love1.jpg'} alt="Kenangan 1" style={styles.photoImage} />
               </div>
               <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/images/mine2.jpg'} alt="Kenangan 2" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/img/love2.webp'} alt="Kenangan 2" style={styles.photoImage} />
               </div>
             </div>
             <div style={styles.photoColumn}>
               <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/images/mine3.jpg'} alt="Kenangan 3" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/img/love3.webp'} alt="Kenangan 3" style={styles.photoImage} />
               </div>
               <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/images/mine4.jpg'} alt="Kenangan 4" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/img/love4.jpg'} alt="Kenangan 4" style={styles.photoImage} />
+              </div>
+               <div style={styles.photoColumn}>
+               <div style={styles.photoBox} className="photo-box">
+                <img src={process.env.PUBLIC_URL + '/img/love5.jpg'} alt="Kenangan 4" style={styles.photoImage} />
+              </div>
+                <div style={styles.photoBox} className="photo-box">
+                <img src={process.env.PUBLIC_URL + '/img/love4.jpg'} alt="Kenangan 4" style={styles.photoImage} />
+              </div>
+
               </div>
             </div>
           </div>
