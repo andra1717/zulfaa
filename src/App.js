@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Heart, Home, Book, LogOut } from "lucide-react";
 
-// STYLES
+// STYLES (Tidak ada perubahan di sini)
 const styles = {
   // Login Styles
   loginContainer: {
@@ -358,21 +358,24 @@ const MainPage = ({
 }) => (
   <div style={styles.mainContainer}>
     <nav style={styles.navbar}>
-      <div style={styles.navContainer}>
+      <div style={styles.navContainer} className="nav-container">
         <div style={styles.logo}>
           <Heart style={{ width: "2rem", height: "2rem", color: "#ec4899" }} />
-          <span style={styles.logoText}>Anniversary</span>
+          {/* PERBAIKAN: Tambahkan className agar bisa ditarget CSS */}
+          <span style={styles.logoText} className="logo-text">Anniversary</span>
         </div>
-        <div style={styles.navButtons}>
+        <div style={styles.navButtons} className="nav-buttons">
           <button
             onClick={() => setActiveTab("home")}
             style={{
               ...styles.navButton,
               ...(activeTab === "home" ? styles.activeNavButton : {}),
             }}
+            className="nav-button"
           >
             <Home style={{ width: "1rem", height: "1rem" }} />
-            <span>Home</span>
+            {/* PERBAIKAN: Tambahkan className agar bisa ditarget CSS */}
+            <span className="nav-button-text">Home</span>
           </button>
           <button
             onClick={() => setActiveTab("dokumentasi")}
@@ -380,16 +383,20 @@ const MainPage = ({
               ...styles.navButton,
               ...(activeTab === "dokumentasi" ? styles.activeNavButton : {}),
             }}
+            className="nav-button"
           >
             <Book style={{ width: "1rem", height: "1rem" }} />
-            <span>Dokumentasi</span>
+            {/* PERBAIKAN: Tambahkan className agar bisa ditarget CSS */}
+            <span className="nav-button-text">Dokumentasi</span>
           </button>
           <button
             onClick={handleLogout}
             style={{ ...styles.navButton, color: "#ef4444" }}
+            className="nav-button"
           >
             <LogOut style={{ width: "1rem", height: "1rem" }} />
-            <span>Logout</span>
+            {/* PERBAIKAN: Tambahkan className agar bisa ditarget CSS */}
+            <span className="nav-button-text">Logout</span>
           </button>
         </div>
       </div>
@@ -446,9 +453,6 @@ const MainPage = ({
             {[1, 2, 3, 4, 5, 6].map((num) => (
               <div key={num} style={styles.docPhotoBox} className="photo-box">
                 <img
-                  // ==========================================================
-                  // PERBAIKAN UTAMA DI SINI: Menghapus spasi dan kurung
-                  // ==========================================================
                   src={`${process.env.PUBLIC_URL}/images/mine${num}.jpg`}
                   alt={`mine ${num}`}
                   style={styles.photoImage}
@@ -525,7 +529,7 @@ const AnniversaryApp = () => {
       setIsLoggedIn(true);
       setLoginError("");
     } else {
-      setLoginError("Username atau password salah!");
+      setLoginError("Aku Lupa Kalo Usernamenya Itu Nama Kamu sayang!");
     }
   };
 
@@ -572,6 +576,30 @@ const AnniversaryApp = () => {
       .photo-box:hover .photo-image {
         transform: scale(1.1);
       }
+
+      /* ========================================================== */
+      /* PERBAIKAN: Aturan CSS untuk layar kecil (HP) */
+      /* ========================================================== */
+      @media (max-width: 768px) {
+        .nav-container {
+          padding: 0 1rem; /* Kurangi padding di samping */
+        }
+        .logo-text {
+          display: none; /* Sembunyikan teks "Anniversary" */
+        }
+        .nav-buttons {
+          gap: 0.5rem; /* Kurangi jarak antar tombol */
+        }
+        .nav-button {
+          padding: 0.5rem; /* Buat tombol sedikit lebih kecil */
+        }
+        .nav-button-text {
+          display: none; /* Sembunyikan teks di dalam tombol */
+        }
+        .photo-grid {
+          grid-template-columns: 1fr; /* Buat foto menjadi 1 kolom */
+        }
+      }
     `}</style>
   );
 
@@ -602,3 +630,4 @@ const AnniversaryApp = () => {
 };
 
 export default AnniversaryApp;
+
