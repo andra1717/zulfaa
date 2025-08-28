@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/zulfaa/static/css/main.5b5e2004.css",
-    "main.js": "/zulfaa/static/js/main.8567ed49.js",
+    "main.js": "/zulfaa/static/js/main.7fd770a1.js",
     "static/js/453.779a6ffa.chunk.js": "/zulfaa/static/js/453.779a6ffa.chunk.js",
     "index.html": "/zulfaa/index.html",
     "main.5b5e2004.css.map": "/zulfaa/static/css/main.5b5e2004.css.map",
-    "main.8567ed49.js.map": "/zulfaa/static/js/main.8567ed49.js.map",
+    "main.7fd770a1.js.map": "/zulfaa/static/js/main.7fd770a1.js.map",
     "453.779a6ffa.chunk.js.map": "/zulfaa/static/js/453.779a6ffa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b5e2004.css",
-    "static/js/main.8567ed49.js"
+    "static/js/main.7fd770a1.js"
   ]
 }
