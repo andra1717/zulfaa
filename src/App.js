@@ -445,7 +445,7 @@ const MainPage = ({
               </div>
               <div style={styles.photoBox} className="photo-box">
                 {/* Menggunakan love4.jpg lagi sesuai kode Anda sebelumnya */}
-                <img src={process.env.PUBLIC_URL + '/img/love4.jpg'} alt="Kenangan 6" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/img/love6.jpg'} alt="Kenangan 6" style={styles.photoImage} />
               </div>
             </div>
           </div>
