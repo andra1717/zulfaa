@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Heart, Home, Book, LogOut } from "lucide-react";
 
-// STYLES (Tidak ada perubahan di sini)
+// STYLES
 const styles = {
   // Login Styles
   loginContainer: {
@@ -361,7 +361,6 @@ const MainPage = ({
       <div style={styles.navContainer} className="nav-container">
         <div style={styles.logo}>
           <Heart style={{ width: "2rem", height: "2rem", color: "#ec4899" }} />
-          {/* PERBAIKAN: Tambahkan className agar bisa ditarget CSS */}
           <span style={styles.logoText} className="logo-text">Anniversary</span>
         </div>
         <div style={styles.navButtons} className="nav-buttons">
@@ -374,7 +373,6 @@ const MainPage = ({
             className="nav-button"
           >
             <Home style={{ width: "1rem", height: "1rem" }} />
-            {/* PERBAIKAN: Tambahkan className agar bisa ditarget CSS */}
             <span className="nav-button-text">Home</span>
           </button>
           <button
@@ -386,7 +384,6 @@ const MainPage = ({
             className="nav-button"
           >
             <Book style={{ width: "1rem", height: "1rem" }} />
-            {/* PERBAIKAN: Tambahkan className agar bisa ditarget CSS */}
             <span className="nav-button-text">Dokumentasi</span>
           </button>
           <button
@@ -395,7 +392,6 @@ const MainPage = ({
             className="nav-button"
           >
             <LogOut style={{ width: "1rem", height: "1rem" }} />
-            {/* PERBAIKAN: Tambahkan className agar bisa ditarget CSS */}
             <span className="nav-button-text">Logout</span>
           </button>
         </div>
@@ -425,6 +421,9 @@ const MainPage = ({
               more years together. I love you, always and forever.
             </p>
           </div>
+          {/* ========================================================== */}
+          {/* PERBAIKAN: Struktur grid foto yang benar untuk 6 gambar */}
+          {/* ========================================================== */}
           <div style={styles.photoGrid}>
             <div style={styles.photoColumn}>
               <div style={styles.photoBox} className="photo-box">
@@ -433,22 +432,20 @@ const MainPage = ({
               <div style={styles.photoBox} className="photo-box">
                 <img src={process.env.PUBLIC_URL + '/img/love2.webp'} alt="Kenangan 2" style={styles.photoImage} />
               </div>
-            </div>
-            <div style={styles.photoColumn}>
               <div style={styles.photoBox} className="photo-box">
                 <img src={process.env.PUBLIC_URL + '/img/love3.webp'} alt="Kenangan 3" style={styles.photoImage} />
               </div>
+            </div>
+            <div style={styles.photoColumn}>
               <div style={styles.photoBox} className="photo-box">
                 <img src={process.env.PUBLIC_URL + '/img/love4.jpg'} alt="Kenangan 4" style={styles.photoImage} />
               </div>
-               <div style={styles.photoColumn}>
-               <div style={styles.photoBox} className="photo-box">
+              <div style={styles.photoBox} className="photo-box">
                 <img src={process.env.PUBLIC_URL + '/img/love5.jpg'} alt="Kenangan 5" style={styles.photoImage} />
               </div>
-                <div style={styles.photoBox} className="photo-box">
+              <div style={styles.photoBox} className="photo-box">
+                {/* Menggunakan love4.jpg lagi sesuai kode Anda sebelumnya */}
                 <img src={process.env.PUBLIC_URL + '/img/love4.jpg'} alt="Kenangan 6" style={styles.photoImage} />
-              </div>
-
               </div>
             </div>
           </div>
@@ -538,7 +535,7 @@ const AnniversaryApp = () => {
       setIsLoggedIn(true);
       setLoginError("");
     } else {
-      setLoginError("Aku Lupa Kalo Usernamenya Itu Nama Kamu sayang!");
+      setLoginError("Username atau password salah!");
     }
   };
 
@@ -586,27 +583,24 @@ const AnniversaryApp = () => {
         transform: scale(1.1);
       }
 
-      /* ========================================================== */
-      /* PERBAIKAN: Aturan CSS untuk layar kecil (HP) */
-      /* ========================================================== */
       @media (max-width: 768px) {
         .nav-container {
-          padding: 0 1rem; /* Kurangi padding di samping */
+          padding: 0 1rem;
         }
         .logo-text {
-          display: none; /* Sembunyikan teks "Anniversary" */
+          display: none;
         }
         .nav-buttons {
-          gap: 0.5rem; /* Kurangi jarak antar tombol */
+          gap: 0.5rem;
         }
         .nav-button {
-          padding: 0.5rem; /* Buat tombol sedikit lebih kecil */
+          padding: 0.5rem;
         }
         .nav-button-text {
-          display: none; /* Sembunyikan teks di dalam tombol */
+          display: none;
         }
         .photo-grid {
-          grid-template-columns: 1fr; /* Buat foto menjadi 1 kolom */
+          grid-template-columns: 1fr;
         }
       }
     `}</style>
@@ -639,4 +633,3 @@ const AnniversaryApp = () => {
 };
 
 export default AnniversaryApp;
-
