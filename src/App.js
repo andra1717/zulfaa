@@ -421,18 +421,18 @@ const MainPage = ({
           <div style={styles.photoGrid}>
             <div style={styles.photoColumn}>
               <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/images/mine (1).jpg'} alt="Kenangan 1" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/images/mine1.jpg'} alt="Kenangan 1" style={styles.photoImage} />
               </div>
               <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/images/mine (2).jpg'} alt="Kenangan 2" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/images/mine2.jpg'} alt="Kenangan 2" style={styles.photoImage} />
               </div>
             </div>
             <div style={styles.photoColumn}>
               <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/images/mine (3).jpg'} alt="Kenangan 3" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/images/mine3.jpg'} alt="Kenangan 3" style={styles.photoImage} />
               </div>
               <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/images/mine (4).jpg'} alt="Kenangan 4" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/images/mine4.jpg'} alt="Kenangan 4" style={styles.photoImage} />
               </div>
             </div>
           </div>
@@ -446,7 +446,10 @@ const MainPage = ({
             {[1, 2, 3, 4, 5, 6].map((num) => (
               <div key={num} style={styles.docPhotoBox} className="photo-box">
                 <img
-                  src={`${process.env.PUBLIC_URL}/images/mine (${num}).jpg`}
+                  // ==========================================================
+                  // PERBAIKAN UTAMA DI SINI: Menghapus spasi dan kurung
+                  // ==========================================================
+                  src={`${process.env.PUBLIC_URL}/images/mine${num}.jpg`}
                   alt={`mine ${num}`}
                   style={styles.photoImage}
                 />
@@ -493,7 +496,7 @@ const MainPage = ({
                   Semoga Kita Bahagia Selalu! 💕
                 </h3>
                 <p style={styles.thanksText}>
-                  Terima kasih sayangku sudah bertahan sejauh ini sama mas. i love you manis💕💕💕💕! ✨ 
+                  Terima kasih sayangku sudah bertahan sejauh ini sama mas. i love you manis💕💕💕💕! ✨
                 </p>
               </div>
             </div>
