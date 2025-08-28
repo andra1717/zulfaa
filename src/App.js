@@ -443,10 +443,10 @@ const MainPage = ({
               </div>
                <div style={styles.photoColumn}>
                <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/img/love5.jpg'} alt="Kenangan 4" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/img/love5.jpg'} alt="Kenangan 5" style={styles.photoImage} />
               </div>
                 <div style={styles.photoBox} className="photo-box">
-                <img src={process.env.PUBLIC_URL + '/img/love4.jpg'} alt="Kenangan 4" style={styles.photoImage} />
+                <img src={process.env.PUBLIC_URL + '/img/love4.jpg'} alt="Kenangan 6" style={styles.photoImage} />
               </div>
 
               </div>
